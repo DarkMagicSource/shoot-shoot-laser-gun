@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-// using UnityEngine.Tilemaps;
+using UnityEngine.Tilemaps;
 
 public class Bullet : MonoBehaviour
 {
   public float speed = 20f;
   public Rigidbody2D rb;
-  // public Tilemap tilemap;
-  // public Vector3 tilePos;
 
   // Start is called before the first frame update
   void Start()
@@ -17,17 +15,12 @@ public class Bullet : MonoBehaviour
   void OnTriggerEnter2D(Collider2D collision)
   {
     Debug.Log("Inital Collision " + collision.name);
-    // Debug.Log(collision.name);
     if (collision.name == "Tilemap_Boxes")
     {
-      // code v1
-      // // Debug.Log("Collision with non-player");
-      // Debug.Log(collision.name);
-      // Destroy(collision);
-      // Destroy(gameObject);
-
-      // code v2
-      //tilePos = tilemap.WorldToCell(collision.gameObject.transform.position);
+      var map = collision.gameObject.GetComponent<Tilemap>();
+      var tilePos = map.WorldToCell(transform.position);
+      map.SetTile(tilePos, null);
+      Destroy(gameObject);
     }
   }
 
