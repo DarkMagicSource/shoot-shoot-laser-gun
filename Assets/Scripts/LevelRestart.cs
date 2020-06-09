@@ -7,10 +7,9 @@ public class LevelRestart : MonoBehaviour
 
   void Update()
   {
-    if (player.transform.position.y <= -10 || Input.GetKeyDown(KeyCode.R))
+    if (player.transform.position.y <= -10 || Input.GetKeyDown(KeyCode.R)) // When player falls off the map or hits the reset key (R)
     {
-      // Scene scene = SceneManager.GetActiveScene();
-      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload current scene
     }
   }
 }

@@ -2,11 +2,11 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-  public CharacterController2D controller;
+  public CharacterController2D controller; // Import movement controller
 
-  public float runSpeed = 40f;
-  float horizontalMove = 0f;
-  bool jump = false;
+  public float runSpeed = 40f; // Player run speed
+  float horizontalMove = 0f; // Create variable for horizontal player movement
+  bool jump = false; // Create variable for jump
 
   void Update()
   {
