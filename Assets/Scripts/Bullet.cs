@@ -3,11 +3,13 @@ using UnityEngine.Tilemaps;
 
 public class Bullet : MonoBehaviour
 {
+  [Tooltip("How fast the bullet travels")]
   public float speed = 10f;
-  public Rigidbody2D rb;
+  private Rigidbody2D rb;
 
   void Start()
   {
+    rb = gameObject.GetComponent<Rigidbody2D>();
     rb.velocity = transform.right * speed; // Propels bullet forward
   }
 

@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+  [Tooltip("Reference to fire point")]
   public Transform firePoint; // Position to fire bullet from
+  [Tooltip("Reference to bullet prefab")]
   public GameObject bulletPrefab; // Bullet object to summon
 
   void Update()

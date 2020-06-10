@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelRestart : MonoBehaviour
 {
+  [Tooltip("Reference to player object")]
   public GameObject player;
 
   void Update()
