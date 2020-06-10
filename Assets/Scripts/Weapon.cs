@@ -6,7 +6,8 @@ public class Weapon : MonoBehaviour
   public Transform firePoint; // Position to fire bullet from
   [Tooltip("Reference to bullet prefab")]
   public GameObject bulletPrefab; // Bullet object to summon
-  public int mag = 3;
+  [Tooltip("Number to bullets in gun")]
+  public int mag = 3; // Number of bullets
 
   void Update()
   {
