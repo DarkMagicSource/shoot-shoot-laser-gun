@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D collision)
   {
-    Debug.Log("Inital Collision " + collision.name);
+    // Debug.Log("Inital Collision " + collision.name);
     if (collision.name == "Tilemap_Boxes") // Test if bullet is hitting boxes tilemap layer
     {
       var map = collision.gameObject.GetComponent<Tilemap>(); // Get tilemap component from collided object

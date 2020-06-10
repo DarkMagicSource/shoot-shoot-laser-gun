@@ -11,14 +11,9 @@ public class Weapon : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.E)) // Fire when player presses E
     {
-      Shoot();
+      // Shooting logic
+      // Debug.Log("Fire!");
+      Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // Create bullet object from prefab
     }
-  }
-
-  void Shoot()
-  {
-    // Shooting logic
-    Debug.Log("Fire!");
-    Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // Create bullet object from prefab
   }
 }
