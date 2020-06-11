@@ -16,7 +16,6 @@ public class Weapon : MonoBehaviour
       if (mag >= 1)
       {
         // Shooting logic
-        // Debug.Log("Fire!");
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // Create bullet object from prefab
         mag = mag - 1;
       }
