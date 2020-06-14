@@ -8,6 +8,12 @@ public class PlayerMovement : MonoBehaviour
   public float runSpeed = 40f; // Player run speed
   float horizontalMove = 0f; // Create variable for horizontal player movement
   bool jump = false; // Create variable for jump
+  private Rigidbody2D player;
+
+  void Start()
+  {
+    player = GetComponent<Rigidbody2D>();
+  }
 
   void Update()
   {
@@ -17,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     {
       jump = true;
     }
+
+    // Vector2 vel = player.velocity;
+    // while (vel.magnitude == 0)
+    // {
+    //   Debug.Log("Not moving");
+    // }
   }
 
   void FixedUpdate()
