@@ -3,6 +3,9 @@
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
+    "**/LICENSE": true,
+    "**/.gitattributes": true,
+    "**/.gitignore": true,
     "**/*.meta": true,
     "**/*.*.meta": true,
     "**/*.unity": true,
@@ -13,8 +16,13 @@
     "**/*.tga": true,
     "**/*.cubemap": true,
     "**/*.prefab": true,
+    "**/*.csproj": true,
+    "**/*.sln": true,
     "**/Library": true,
     "**/ProjectSettings": true,
-    "**/Temp": true
+    "**/Temp": true,
+    "**/Logs": true,
+    "**/obj": true,
+    "**/Packages": true
   }
 }
