@@ -113,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  impactEffect: {fileID: 0}
 --- !u!50 &1441589390403372792
 Rigidbody2D:
   serializedVersion: 4

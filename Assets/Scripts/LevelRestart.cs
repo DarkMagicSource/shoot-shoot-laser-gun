@@ -12,18 +12,18 @@ public class LevelRestart : MonoBehaviour
   {
     if (player.transform.position.y <= -10 || Input.GetKeyDown(KeyCode.R)) // When player falls off the map or hits the reset key (R)
     {
-      //StartCoroutine(ReloadLevel());
+      // StartCoroutine(ReloadLevel());
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
       Debug.Log("Level reloaded");
     }
   }
 
-  //   IEnumerator ReloadLevel()
-  //   {
-  //     transition.SetTrigger("Die");
+  IEnumerator ReloadLevel()
+  {
+    transition.SetTrigger("Die");
 
-  //     yield return new WaitForSeconds(5);
+    yield return new WaitForSeconds(5);
 
-  //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-  //   }
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+  }
 }

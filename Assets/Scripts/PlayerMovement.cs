@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,9 +11,14 @@ public class PlayerMovement : MonoBehaviour
   bool jump = false; // Create variable for jump
   private Rigidbody2D player;
 
+  public Slider energyBar;
+
   void Start()
   {
     player = GetComponent<Rigidbody2D>();
+
+    energyBar.maxValue = 100;
+    energyBar.value = energyBar.maxValue;
   }
 
   void Update()
@@ -21,14 +27,24 @@ public class PlayerMovement : MonoBehaviour
 
     if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W))
     {
-      jump = true;
+      if (energyBar.value >= 60)
+      {
+        jump = true;
+        energyBar.value = energyBar.value - 60;
+      }
+      else
+      {
+        Debug.Log("Pleae wait for your jump to recharge...");
+      }
     }
 
-    // Vector2 vel = player.velocity;
-    // while (vel.magnitude == 0)
-    // {
-    //   Debug.Log("Not moving");
-    // }
+    energyBar.value = energyBar.value + 0.1f;
+
+    /* Vector2 vel = player.velocity;
+    while (vel.magnitude == 0)
+    {
+      Debug.Log("Not moving");
+    } */
   }
 
   void FixedUpdate()

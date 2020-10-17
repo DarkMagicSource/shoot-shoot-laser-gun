@@ -5,7 +5,7 @@
     "**/.DS_Store": true,
     "**/LICENSE": true,
     "**/.gitattributes": true,
-    "**/.gitignore": true,
+    "**/.gitignore": false,
     "**/*.meta": true,
     "**/*.*.meta": true,
     "**/*.unity": true,
