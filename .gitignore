@@ -73,6 +73,10 @@ crashlytics-build.properties
 # Ignore TextMesh Pro
 Assets/TextMesh Pro/*
 
+# Ignore Bolt
+Assets/Install Bolt/*
+Assets/Lidiq/*
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
