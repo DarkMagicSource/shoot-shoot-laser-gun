@@ -75,7 +75,7 @@ Assets/TextMesh Pro/*
 
 # Ignore Bolt
 Assets/Install Bolt/*
-Assets/Lidiq/*
+Assets/Ludiq/*
 
 .vscode/*
 !.vscode/settings.json
