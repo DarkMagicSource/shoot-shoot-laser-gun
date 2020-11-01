@@ -1276,7 +1276,6 @@ MonoBehaviour:
   firePoint: {fileID: 1596315}
   bulletPrefab: {fileID: 5114760851689527355, guid: 5c7b302e6089447fcab821088014af7e,
     type: 3}
-  mag: 30
   ammoBar: {fileID: 681137635}
 --- !u!1 &461726999
 GameObject:
