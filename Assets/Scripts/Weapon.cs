@@ -13,13 +13,13 @@ public class Weapon : MonoBehaviour
 
   void Start()
   {
-    ammoBar.maxValue = 15;
+    ammoBar.maxValue = 200;
     ammoBar.value = ammoBar.maxValue;
   }
 
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.E)) // Fire when player presses E
+    if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) // Fire when player presses E
     {
       if (ammoBar.value >= 1)
       {
