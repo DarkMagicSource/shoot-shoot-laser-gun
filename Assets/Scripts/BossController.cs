@@ -35,9 +35,10 @@ public class BossController : MonoBehaviour
 
   IEnumerator CalculateAttack()
   {
+    // Get random value and set to variables to be used in this iteration
     int AttackId = GetAttackId();
     int attackCooldown = GetAttackCooldown();
-    currentlyAttacking = true;
+    currentlyAttacking = true; // Set currentlyAttacking true to prevent another attack from being triggered
 
     switch (AttackId)
     {
@@ -53,8 +54,9 @@ public class BossController : MonoBehaviour
     }
 
     Debug.Log("Attack Cooldown: " + attackCooldown + "s");
-    yield return new WaitForSeconds(attackCooldown);
 
+    // Wait until cooldown expires to reset currentlyAttacking to false to allow other attack to be triggered
+    yield return new WaitForSeconds(attackCooldown);
     currentlyAttacking = false;
   }
 
